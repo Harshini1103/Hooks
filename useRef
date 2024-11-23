@@ -1,0 +1,18 @@
+import React, { useRef } from "react";
+
+const UseRefExample = () => {
+  const inputRef = useRef();
+
+  const focusInput = () => {
+    inputRef.current.focus(); // Focuses the input element
+  };
+
+  return (
+    <div>
+      <input ref={inputRef} type="text" placeholder="Type something..." />
+      <button onClick={focusInput}>Focus Input</button>
+    </div>
+  );
+};
+
+export default UseRefExample;
