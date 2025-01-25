@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
-const Hello=()=>{
 
- const [count,setCount]=useState(0);
- 
-const Increment=()=>
-{
-setCount((arr)=>arr+1)
+
+
+const App = () => {
+   const [count,setCount]=useState(0); 
+  return (
+    <div className='font-black text-center text-2xl'>
+        <h1>counter:{count}</h1>
+        <button onClick={()=>setCount(count+1)} className="border border-gray-500 p-2 rounded ml-2">Increase</button>
+        <button onClick={()=>setCount(count-1)} className="border border-gray-500 p-2 rounded ml-2">Decrease</button>
+        <button onClick={()=>setCount(0)} className="border border-gray-500 p-2 rounded ml-2">Reset</button>
+    </div>
+  )
 }
-const Decrement=()=>
-{
-setCount((arr)=>arr-1)
-}
-  return<div>
-<h1>{count}</h1>
-<button onClick={ Increment}>+</button>
-<button onClick={Decrement}>-</button>
-  </div>
-}
-export default Hello;
+
+export default App;
